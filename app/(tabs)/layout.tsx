@@ -1,12 +1,33 @@
 import type { ReactNode } from 'react';
+import { getEvent } from '@/lib/event';
+import { NowProvider } from '@/context/NowProvider';
+import { FavoritesProvider } from '@/context/FavoritesProvider';
+import { RecentsProvider } from '@/context/RecentsProvider';
+import { HappeningNowBanner } from '@/components/chrome/HappeningNowBanner';
+import { BottomNav } from '@/components/chrome/BottomNav';
 
-// Tab shell. The sticky HappeningNowBanner and BottomNav land here in
-// TASK-05/06; for now it establishes the mobile-first centered column with
-// safe-area padding. Native window scroll (no inner overflow containers).
+// Tab shell: mobile-first centered column, native window scroll. The server
+// reads the validated event once and hands the banner the data it needs; the
+// client providers (now / favorites / recents) wrap the screens. The sticky
+// banner sits at the top of the column; the fixed BottomNav clears the inset.
 export default function TabsLayout({ children }: { children: ReactNode }) {
+  const event = getEvent();
+
   return (
-    <div className="mx-auto min-h-dvh w-full max-w-[480px]">
-      <main>{children}</main>
-    </div>
+    <NowProvider>
+      <FavoritesProvider>
+        <RecentsProvider>
+          <div className="mx-auto min-h-dvh w-full max-w-[480px]">
+            <HappeningNowBanner
+              sessions={event.sessions}
+              rooms={event.rooms}
+              conf={{ startsAt: event.conference.startsAt, endsAt: event.conference.endsAt }}
+            />
+            <main className="pb-[88px]">{children}</main>
+            <BottomNav />
+          </div>
+        </RecentsProvider>
+      </FavoritesProvider>
+    </NowProvider>
   );
 }
