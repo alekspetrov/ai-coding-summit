@@ -1,8 +1,28 @@
 # TASK-03: Pure Logic + Tests
 
-**Status**: 📋 Planned
+**Status**: ✅ Merged (Pilot #2, commit `9074176`) · ⚠️ **data-layer integration deferred** — see Review
 **Created**: 2026-06-30
-**Assignee**: Manual
+**Assignee**: Pilot (handoff)
+
+> **Review (2026-06-30, read-only — no execution):** `lib/{time,banner,schedule,search}.ts`
+> + tests + `lib/fixtures/time-states.ts` are merged; commit `9074176` reports 96 tests green
+> under `TZ=America/New_York`. The pure-logic layer is sound **in isolation**.
+>
+> **The index status "integrated" overstates it.** The functions are still typed against the
+> throwaway `lib/types.ts` (its own header says *"TASK-02 will replace these"*), which was
+> **not** removed — commit `9074176` explicitly defers it (*"Unify as follow-up"*). This passes
+> CI for two reasons: (a) array-taking functions (`groupIntoSlots`, `computeBanner`, …) accept
+> `schema.Session[]` because the strict schema type is structurally assignable to the loose
+> `types.Session`; (b) the one function that reads a whole `Event` — `searchEvent` — has **no
+> real caller yet** (UI wiring is TASK-05/06).
+>
+> ⚠️ **Latent defect (will throw when wired):** `searchEvent`'s `SearchableEvent` reads
+> SCREAMING_CASE keys (`event.SESSIONS` / `SPEAKERS` / `TRACKS`); the merged `@/lib/schema`
+> `Event` uses lowercase (`sessions`/`speakers`/`tracks`). Calling `searchEvent(getEvent(), q)`
+> → `undefined.filter` → **TypeError**, uncaught by typecheck/tests.
+>
+> **Follow-up before TASK-05/06 wire search:** rewire logic imports `./types` → `@/lib/schema`,
+> rename `SearchableEvent` keys to lowercase (or accept `Event` directly), delete `lib/types.ts`.
 
 ---
 

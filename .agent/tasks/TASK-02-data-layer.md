@@ -1,8 +1,17 @@
 # TASK-02: Data Layer (Zod + Loader + JSON)
 
-**Status**: 📋 Planned
+**Status**: ✅ Complete — merged to main (Pilot #1, data layer commit `ae083c4` → integrated via `1254f4e`)
 **Created**: 2026-06-30
-**Assignee**: Manual
+**Assignee**: Pilot (handoff)
+
+> **Review (2026-06-30, read-only — no execution):** schema verified by reading.
+> `lib/schema.ts` implements the 5-variant discriminated union on `kind`, ISO datetimes
+> with `offset: true`, `z.infer`-derived types, and a `server-only` + `React.cache` loader
+> with `getEvent/getSession/getSpeaker/getDays` selectors. Merge commit `1254f4e` reports
+> green (34 tests); **not re-run here**.
+> ⚠️ **One AC gap:** the *"build-time check that offsets match Europe/Amsterdam"* is **not
+> implemented** — `ISODatetime` only requires *an* offset, not that it equals Amsterdam's.
+> URL-ish fields (`socials.*`, `media.*Url`, `signupUrl`) are bare `z.string()`, not `z.url()`.
 
 ---
 

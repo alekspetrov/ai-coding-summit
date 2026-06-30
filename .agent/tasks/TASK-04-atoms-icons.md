@@ -1,8 +1,16 @@
 # TASK-04: Atoms + Icons
 
-**Status**: 📋 Planned
+**Status**: 🚧 Partial — Phase 1 (icons + atoms) + `FavoriteStar` done; Phase 2 cards in progress
 **Created**: 2026-06-30
 **Assignee**: Manual
+
+> **Review (2026-06-30, read-only):** Phase 1 landed (`components/icons/icons.tsx`,
+> `components/common/*`, `components/session/FavoriteStar.tsx` + colocated tests).
+> Phase 2 in progress: `components/speaker/SpeakerRow.tsx` exists but is **untracked /
+> uncommitted, with no colocated test yet** (every sibling has one). It is wired against
+> the *merged* `@/lib/schema` `Speaker` (correct contract) and reuses `Avatar` + icons +
+> theme tokens consistently. `SessionCard` not yet started. Cards are **no longer blocked**
+> — the TASK-02 data layer is on main. Treat `SpeakerRow` as not-done until test + commit land.
 
 ---
 

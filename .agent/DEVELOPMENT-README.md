@@ -15,7 +15,7 @@ Plan: `~/.claude/plans/research-this-with-a-playful-newell.md`.
 |------|-------|--------|
 | [TASK-01](./tasks/TASK-01-scaffold-theming.md) | Scaffold + theming foundation | ✅ Complete |
 | [TASK-02](./tasks/TASK-02-data-layer.md) | Data layer (Zod + loader + JSON) | ✅ Complete (Pilot #1/PR#6, integrated) |
-| [TASK-03](./tasks/TASK-03-pure-logic.md) | Pure logic + tests | ✅ Complete (Pilot #2/PR#5, integrated 9074176) |
+| [TASK-03](./tasks/TASK-03-pure-logic.md) | Pure logic + tests | ✅ Merged (Pilot #2, 9074176) · ⚠️ not yet wired to real data — `searchEvent`/`lib/types.ts` unify pending (see task doc) |
 | [TASK-04](./tasks/TASK-04-atoms-icons.md) | Atoms + icons | 🚧 Partial — atoms+icons done; cards next (now unblocked) |
 | [TASK-05](./tasks/TASK-05-state-providers-banner.md) | State + providers + banner ("now") | 🔓 Unblocked — ready |
 | [TASK-06](./tasks/TASK-06-screens-routing.md) | Screens + routing | 🔓 Unblocked — ready |
