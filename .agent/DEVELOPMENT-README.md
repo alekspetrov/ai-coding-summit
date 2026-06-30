@@ -1,8 +1,26 @@
 # ai-coding-summit - Development Documentation Navigator
 
 **Project**: ai-coding-summit
-**Tech Stack**: TBD (greenfield — update after first scaffold)
+**Tech Stack**: Next.js 16 (App Router) · React 19 · TypeScript · Tailwind v4 · Zod · Vitest (greenfield, in progress)
 **Updated**: 2026-06-30
+
+---
+
+## 📌 Task Index
+
+First build target: **GitNation Conference Companion** — mobile-first, static-first PWA.
+Plan: `~/.claude/plans/research-this-with-a-playful-newell.md`.
+
+| Task | Title | Status |
+|------|-------|--------|
+| [TASK-01](./tasks/TASK-01-scaffold-theming.md) | Scaffold + theming foundation | 🚧 In Progress |
+| [TASK-02](./tasks/TASK-02-data-layer.md) | Data layer (Zod + loader + JSON) | 📋 Planned |
+| [TASK-03](./tasks/TASK-03-pure-logic.md) | Pure logic + tests | 📋 Planned |
+| [TASK-04](./tasks/TASK-04-atoms-icons.md) | Atoms + icons | 📋 Planned |
+| [TASK-05](./tasks/TASK-05-state-providers-banner.md) | State + providers + banner ("now") | 📋 Planned |
+| [TASK-06](./tasks/TASK-06-screens-routing.md) | Screens + routing | 📋 Planned |
+| [TASK-07](./tasks/TASK-07-pwa-offline-polish.md) | PWA + offline + polish | 📋 Planned |
+| [TASK-08](./tasks/TASK-08-navigator-docs.md) | Navigator docs update | 📋 Planned |
 
 ---
 
