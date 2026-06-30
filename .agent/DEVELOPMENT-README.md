@@ -16,11 +16,16 @@ Plan: `~/.claude/plans/research-this-with-a-playful-newell.md`.
 | [TASK-01](./tasks/TASK-01-scaffold-theming.md) | Scaffold + theming foundation | ✅ Complete |
 | [TASK-02](./tasks/TASK-02-data-layer.md) | Data layer (Zod + loader + JSON) | ✅ Complete (Pilot #1/PR#6, integrated) |
 | [TASK-03](./tasks/TASK-03-pure-logic.md) | Pure logic + tests | ✅ Merged (Pilot #2, 9074176) · ⚠️ not yet wired to real data — `searchEvent`/`lib/types.ts` unify pending (see task doc) |
-| [TASK-04](./tasks/TASK-04-atoms-icons.md) | Atoms + icons | 🚧 Partial — atoms+icons done; cards next (now unblocked) |
-| [TASK-05](./tasks/TASK-05-state-providers-banner.md) | State + providers + banner ("now") | 🔓 Unblocked — ready |
+| [TASK-04](./tasks/TASK-04-atoms-icons.md) | Atoms + icons | ✅ Components done (atoms+icons+cards, all tested) · wiring → TASK-05/06 |
+| [TASK-05](./tasks/TASK-05-state-providers-banner.md) | State + providers + banner ("now") | ✅ Complete (08fcb72) — providers + banner + nav; browser smoke of ?t=/hydration pending |
 | [TASK-06](./tasks/TASK-06-screens-routing.md) | Screens + routing | 🔓 Unblocked — ready |
 | [TASK-07](./tasks/TASK-07-pwa-offline-polish.md) | PWA + offline + polish | ⏸️ Deferred (open) — manifest+icon done; SW dropped (no PWA for now) |
 | [TASK-08](./tasks/TASK-08-navigator-docs.md) | Navigator docs update | 📋 Planned (last) |
+| [TASK-09](./tasks/TASK-09-unify-logic-types-on-schema.md) | Unify logic types on Zod schema | 📋 Planned — **gates `searchEvent` wiring in TASK-06**; delete `lib/types.ts` |
+
+> **Review note (2026-06-30):** TASK-05 banner (`computeBanner`) takes arrays and is genuinely
+> ready. TASK-06 **search** wiring is gated on **TASK-09** — `searchEvent` reads SCREAMING_CASE
+> keys that don't exist on the real `Event` and will throw until unified.
 
 ---
 

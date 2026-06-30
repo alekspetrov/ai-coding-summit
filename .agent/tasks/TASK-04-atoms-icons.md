@@ -1,16 +1,22 @@
 # TASK-04: Atoms + Icons
 
-**Status**: 🚧 Partial — Phase 1 (icons + atoms) + `FavoriteStar` done; Phase 2 cards in progress
+**Status**: ✅ Components complete (atoms + icons + both cards, all tested) — wiring deferred to TASK-05/06
 **Created**: 2026-06-30
 **Assignee**: Manual
 
-> **Review (2026-06-30, read-only):** Phase 1 landed (`components/icons/icons.tsx`,
-> `components/common/*`, `components/session/FavoriteStar.tsx` + colocated tests).
-> Phase 2 in progress: `components/speaker/SpeakerRow.tsx` exists but is **untracked /
-> uncommitted, with no colocated test yet** (every sibling has one). It is wired against
-> the *merged* `@/lib/schema` `Speaker` (correct contract) and reuses `Avatar` + icons +
-> theme tokens consistently. `SessionCard` not yet started. Cards are **no longer blocked**
-> — the TASK-02 data layer is on main. Treat `SpeakerRow` as not-done until test + commit land.
+> **Review (2026-06-30, read-only; updated after research pass):** all components built and
+> **all have colocated tests**:
+> - Phase 1 — `components/icons/icons.tsx` (13 icons), `components/common/*` (Avatar, KindChip,
+>   TrackChip, LiveDot, EmptyState, SkeletonCard), `components/session/FavoriteStar.tsx`
+>   (the only Client Component).
+> - Phase 2 — `components/session/SessionCard.tsx` (5 kind variants, imports `@/lib/schema`)
+>   **+ `SessionCard.test.tsx`**, and `components/speaker/SpeakerRow.tsx` **+ `SpeakerRow.test.tsx`**.
+>   *(Corrects an earlier note that said SpeakerRow had no test — it now does.)*
+> - `lib/storage.ts` (`storageKey`/`isCompanionKey`) added as TASK-05 groundwork — **untested, no callsites yet.**
+>
+> ⚠️ Not wired: `SessionCard`/`SpeakerRow` take `href` props pointing at `/sessions/[id]`,
+> `/speakers/[id]` routes that **don't exist yet** (TASK-06). They accept `@/lib/schema` props
+> but no page passes real data (TASK-05/06). Components are ready; integration is the open work.
 
 ---
 
