@@ -1,6 +1,6 @@
 # TASK-09: Unify Pure-Logic Types on the Zod Schema
 
-**Status**: 📋 Planned — **must land before TASK-05/06 wire `searchEvent`/banner/schedule to real data**
+**Status**: ✅ Complete (commit 193474e) — `lib/types.ts` deleted, `searchEvent` takes lowercase `Event`, fixtures schema-valid, 109 tests green under `TZ=America/New_York`
 **Created**: 2026-06-30
 **Assignee**: Manual
 
