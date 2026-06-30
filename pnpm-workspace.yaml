@@ -1,0 +1,7 @@
+# pnpm 11 blocks dependency build scripts by default and reads the approval
+# list from here. Allow only known, trusted native deps:
+#   sharp         — Next.js image optimization (next/image)
+#   unrs-resolver — native module resolver used by ESLint import plugins
+allowBuilds:
+  sharp: true
+  unrs-resolver: true
