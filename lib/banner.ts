@@ -1,5 +1,5 @@
 import { parseISO, diffMin } from './time';
-import type { Session } from './types';
+import type { Session } from '@/lib/schema';
 
 export interface ConferenceBounds {
   startsAt: string;

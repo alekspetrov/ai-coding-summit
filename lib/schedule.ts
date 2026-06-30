@@ -1,4 +1,4 @@
-import type { Session, Speaker } from './types';
+import type { Session, Speaker } from '@/lib/schema';
 
 export interface Slot {
   startsAt: string;

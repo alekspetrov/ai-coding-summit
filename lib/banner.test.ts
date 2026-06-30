@@ -87,7 +87,7 @@ describe('computeBanner — boundary conditions', () => {
     const sessions = [
       { kind: 'talk' as const, id: 'far', title: 'Far Away',
         startsAt: '2026-06-13T06:02:00+02:00', endsAt: '2026-06-13T07:00:00+02:00',
-        dayId: 'd1', roomId: 'r-main', trackId: 't-react' },
+        dayId: 'd1', roomId: 'r-main', trackId: 't-react', abstract: '', speakerIds: [] },
     ];
     // now = 00:01, session starts at 06:02 → 361 minutes away → hidden
     const result = computeBanner(sessions, '2026-06-13T00:01:00+02:00', conf);
@@ -102,7 +102,7 @@ describe('computeBanner — boundary conditions', () => {
     const sessions = [
       { kind: 'talk' as const, id: 'near', title: 'Near',
         startsAt: '2026-06-13T06:00:00+02:00', endsAt: '2026-06-13T07:00:00+02:00',
-        dayId: 'd1', roomId: 'r-main', trackId: 't-react' },
+        dayId: 'd1', roomId: 'r-main', trackId: 't-react', abstract: '', speakerIds: [] },
     ];
     // now = 00:00, session starts at 06:00 → exactly 360 min → upcoming
     const result = computeBanner(sessions, '2026-06-13T00:00:00+02:00', conf);
@@ -117,7 +117,7 @@ describe('computeBanner — boundary conditions', () => {
         dayId: 'd1', roomId: 'r-foyer', breakType: 'coffee' as const },
       { kind: 'talk' as const, id: 'tlk', title: 'A Talk',
         startsAt: '2026-06-13T10:00:00+02:00', endsAt: '2026-06-13T11:00:00+02:00',
-        dayId: 'd1', roomId: 'r-main', trackId: 't-react' },
+        dayId: 'd1', roomId: 'r-main', trackId: 't-react', abstract: '', speakerIds: [] },
     ];
     // During the coffee break, banner should show upcoming talk, not live break
     const result = computeBanner(sessions, '2026-06-13T09:30:00+02:00', conf);

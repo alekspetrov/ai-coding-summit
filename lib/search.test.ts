@@ -2,7 +2,7 @@ import { describe, it, expect } from 'vitest';
 import { searchEvent } from './search';
 import { SESSIONS, SPEAKERS, TRACKS } from './fixtures/time-states';
 
-const EVENT = { SESSIONS, SPEAKERS, TRACKS };
+const EVENT = { sessions: SESSIONS, speakers: SPEAKERS, tracks: TRACKS };
 
 describe('searchEvent', () => {
   it('returns null for empty query', () => {
