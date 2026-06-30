@@ -13,14 +13,14 @@ Plan: `~/.claude/plans/research-this-with-a-playful-newell.md`.
 
 | Task | Title | Status |
 |------|-------|--------|
-| [TASK-01](./tasks/TASK-01-scaffold-theming.md) | Scaffold + theming foundation | 🚧 In Progress |
-| [TASK-02](./tasks/TASK-02-data-layer.md) | Data layer (Zod + loader + JSON) | 📋 Planned |
-| [TASK-03](./tasks/TASK-03-pure-logic.md) | Pure logic + tests | 📋 Planned |
-| [TASK-04](./tasks/TASK-04-atoms-icons.md) | Atoms + icons | 📋 Planned |
-| [TASK-05](./tasks/TASK-05-state-providers-banner.md) | State + providers + banner ("now") | 📋 Planned |
-| [TASK-06](./tasks/TASK-06-screens-routing.md) | Screens + routing | 📋 Planned |
-| [TASK-07](./tasks/TASK-07-pwa-offline-polish.md) | PWA + offline + polish | 📋 Planned |
-| [TASK-08](./tasks/TASK-08-navigator-docs.md) | Navigator docs update | 📋 Planned |
+| [TASK-01](./tasks/TASK-01-scaffold-theming.md) | Scaffold + theming foundation | ✅ Complete |
+| [TASK-02](./tasks/TASK-02-data-layer.md) | Data layer (Zod + loader + JSON) | 🤖 Pilot (issue #1) |
+| [TASK-03](./tasks/TASK-03-pure-logic.md) | Pure logic + tests | 🤖 Pilot (issue #2) |
+| [TASK-04](./tasks/TASK-04-atoms-icons.md) | Atoms + icons | 🚧 Partial — atoms+icons done; cards/screen-atoms blocked on #1 |
+| [TASK-05](./tasks/TASK-05-state-providers-banner.md) | State + providers + banner ("now") | ⛔ Blocked on Pilot #1/#2 |
+| [TASK-06](./tasks/TASK-06-screens-routing.md) | Screens + routing | ⛔ Blocked on Pilot #1/#2 |
+| [TASK-07](./tasks/TASK-07-pwa-offline-polish.md) | PWA + offline + polish | 🚧 Partial — manifest+icon done; SW needs `@serwist/next` approval |
+| [TASK-08](./tasks/TASK-08-navigator-docs.md) | Navigator docs update | 📋 Planned (last) |
 
 ---
 
