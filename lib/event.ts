@@ -8,7 +8,8 @@ import { getEventConfig } from './config';
 
 const loadEvent = cache((): Event => {
   const config = getEventConfig();
-  const filePath = path.join(process.cwd(), config.dataFile);
+  // config.dataFile is a bare filename under /data (see lib/config.ts).
+  const filePath = path.join(process.cwd(), 'data', config.dataFile);
   const raw: unknown = JSON.parse(fs.readFileSync(filePath, 'utf-8'));
   return Event.parse(raw);
 });

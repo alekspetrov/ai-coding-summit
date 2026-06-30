@@ -1,0 +1,110 @@
+@import 'tailwindcss';
+
+/* ─────────────────────────────────────────────────────────────────────────
+   Theme tokens. Runtime values switch on [data-theme] (set server-side on
+   <html>). Tailwind v4 color aliases below point at these vars so semantic
+   utilities (bg-surface, text-muted, border-line, text-brand …) resolve to
+   the correct light/dark value at runtime with zero JS.
+   Brand vars (--brand, --brand-on-brand, --brand-on-surface, --brand-soft)
+   are injected inline on <html> by brandVars() in lib/color.ts.
+   ───────────────────────────────────────────────────────────────────────── */
+
+:root {
+  /* light (default) */
+  --bg: #f5f6f8;
+  --surface: #ffffff;
+  --surface-2: #fafbfc;
+  --border: rgba(15, 20, 30, 0.07);
+  --border-2: rgba(15, 20, 30, 0.12);
+  --text: #0f141e;
+  --muted: #5a6473;
+  --faint: #8e97a6;
+  --chip-bg: rgba(15, 20, 30, 0.05);
+  --star-off: rgba(15, 20, 30, 0.25);
+  --star-on: #e9a800;
+  --break-text: #7a8392;
+  --banner-bg: #0f141e;
+  color-scheme: light;
+}
+
+:root[data-theme='dark'] {
+  --bg: #0b0f14;
+  --surface: #14181e;
+  --surface-2: #1b2027;
+  --border: rgba(255, 255, 255, 0.08);
+  --border-2: rgba(255, 255, 255, 0.14);
+  --text: #f5f7fa;
+  --muted: #9ca6b3;
+  --faint: #5d6573;
+  --chip-bg: rgba(255, 255, 255, 0.06);
+  --star-off: rgba(255, 255, 255, 0.3);
+  --star-on: #f5c518;
+  --break-text: #7a8392;
+  --banner-bg: #14181e;
+  color-scheme: dark;
+}
+
+@theme inline {
+  --font-mono: ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  --radius-card: 14px;
+  --radius-pill: 999px;
+
+  --color-canvas: var(--bg);
+  --color-surface: var(--surface);
+  --color-surface-2: var(--surface-2);
+  --color-line: var(--border);
+  --color-line-2: var(--border-2);
+  --color-ink: var(--text);
+  --color-muted: var(--muted);
+  --color-faint: var(--faint);
+  --color-chip: var(--chip-bg);
+  --color-star-on: var(--star-on);
+  --color-star-off: var(--star-off);
+  --color-break: var(--break-text);
+  --color-banner: var(--banner-bg);
+
+  --color-brand: var(--brand);
+  --color-brand-soft: var(--brand-soft);
+  --color-on-brand: var(--brand-on-brand);
+  --color-on-surface: var(--brand-on-surface);
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family:
+    -apple-system, BlinkMacSystemFont, 'SF Pro Text', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Live "happening now" beacon — the pulsing dot ring. */
+@keyframes liveBeacon {
+  0% {
+    transform: scale(0.8);
+    opacity: 0.8;
+  }
+  100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+.animate-beacon {
+  animation: liveBeacon 1.4s ease-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .animate-beacon {
+    animation: none;
+  }
+  *,
+  *::before,
+  *::after {
+    transition-duration: 0.01ms !important;
+  }
+}
