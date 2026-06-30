@@ -1,0 +1,46 @@
+# Navigator context markers (session-specific, don't commit)
+.agent/.context-markers/
+!.agent/.context-markers/.gitkeep
+
+# Navigator temporary files
+.agent/.nav-temp/
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+
+# next.js
+/.next/
+/out/
+/build
+
+# testing
+/coverage
+
+# misc
+.DS_Store
+*.pem
+*.tsbuildinfo
+next-env.d.ts
+
+# debug logs
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# env files
+.env
+.env*.local
+
+# vercel
+.vercel
+
+# serwist / pwa generated
+/public/sw.js
+/public/sw.js.map
+/public/swe-worker-*.js
+
+# editor
+.idea
+*.swp
