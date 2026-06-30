@@ -19,7 +19,7 @@ Plan: `~/.claude/plans/research-this-with-a-playful-newell.md`.
 | [TASK-04](./tasks/TASK-04-atoms-icons.md) | Atoms + icons | 🚧 Partial — atoms+icons done; cards/screen-atoms blocked on #1 |
 | [TASK-05](./tasks/TASK-05-state-providers-banner.md) | State + providers + banner ("now") | ⛔ Blocked on Pilot #1/#2 |
 | [TASK-06](./tasks/TASK-06-screens-routing.md) | Screens + routing | ⛔ Blocked on Pilot #1/#2 |
-| [TASK-07](./tasks/TASK-07-pwa-offline-polish.md) | PWA + offline + polish | 🚧 Partial — manifest+icon done; SW needs `@serwist/next` approval |
+| [TASK-07](./tasks/TASK-07-pwa-offline-polish.md) | PWA + offline + polish | ⏸️ Deferred (open) — manifest+icon done; SW dropped (no PWA for now) |
 | [TASK-08](./tasks/TASK-08-navigator-docs.md) | Navigator docs update | 📋 Planned (last) |
 
 ---
