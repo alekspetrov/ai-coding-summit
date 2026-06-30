@@ -1,0 +1,248 @@
+{
+  "conference": {
+    "name": "JSNation",
+    "edition": "Amsterdam 2026",
+    "startsAt": "2026-06-12T09:00:00+02:00",
+    "endsAt": "2026-06-13T18:00:00+02:00",
+    "timezone": "Europe/Amsterdam",
+    "venue": { "name": "Theater Amsterdam" }
+  },
+  "days": [
+    { "id": "d1", "date": "2026-06-12", "label": "Conference Day", "short": "Fri 12" },
+    { "id": "d2", "date": "2026-06-13", "label": "Workshop Day",   "short": "Sat 13" }
+  ],
+  "tracks": [
+    { "id": "t-core",    "name": "JS Core",       "color": "#FBCB0A" },
+    { "id": "t-runtime", "name": "Runtimes",      "color": "#22C55E" },
+    { "id": "t-tooling", "name": "Tooling",       "color": "#A78BFA" },
+    { "id": "t-perf",    "name": "Performance",   "color": "#F59E0B" }
+  ],
+  "rooms": [
+    { "id": "r-main",  "name": "Main Stage", "capacity": 1500 },
+    { "id": "r-side",  "name": "Side Hall",  "capacity": 300  },
+    { "id": "r-lab",   "name": "Lab A",      "capacity": 60   },
+    { "id": "r-foyer", "name": "Foyer",      "capacity": 2000 }
+  ],
+  "speakers": [
+    {
+      "id": "sp-ryan",
+      "name": "Ryan Dahl",
+      "company": "Deno",
+      "tagline": "Node.js creator, Deno founder",
+      "bio": "Ryan created Node.js in 2009 and now leads Deno, a modern JavaScript runtime with first-class TypeScript and web standards.",
+      "initials": "RD",
+      "tint": "#FBCB0A",
+      "socials": { "twitter": "ry", "github": "ry" }
+    },
+    {
+      "id": "sp-lea",
+      "name": "Lea Verou",
+      "company": "MIT",
+      "tagline": "CSS, web standards, HCI",
+      "bio": "Lea is a researcher at MIT CSAIL working on programming tools. She serves on the W3C Technical Architecture Group and co-authored the CSS Secrets book.",
+      "initials": "LV",
+      "tint": "#22C55E",
+      "socials": { "twitter": "LeaVerou", "mastodon": "front-end.social/@leaverou", "website": "lea.verou.me" }
+    },
+    {
+      "id": "sp-mat",
+      "name": "Matteo Collina",
+      "company": "Platformatic",
+      "tagline": "Node.js TSC, Fastify creator",
+      "bio": "Matteo is a Node.js Technical Steering Committee member and the creator of Fastify. He works at Platformatic on making Node.js services production-ready at scale.",
+      "initials": "MC",
+      "tint": "#A78BFA",
+      "socials": { "twitter": "matteocollina", "github": "mcollina" }
+    }
+  ],
+  "sessions": [
+    {
+      "kind": "break",
+      "id": "s-d1-reg",
+      "title": "Registration & Coffee",
+      "startsAt": "2026-06-12T08:30:00+02:00",
+      "endsAt": "2026-06-12T09:30:00+02:00",
+      "dayId": "d1",
+      "roomId": "r-foyer",
+      "breakType": "coffee"
+    },
+    {
+      "kind": "keynote",
+      "id": "s-d1-1",
+      "title": "The State of JavaScript 2026",
+      "abstract": "An honest assessment of where JavaScript stands in 2026 — what the ecosystem got right, what it overcomplicated, and where the runtime story is finally converging.",
+      "startsAt": "2026-06-12T09:30:00+02:00",
+      "endsAt": "2026-06-12T10:15:00+02:00",
+      "dayId": "d1",
+      "roomId": "r-main",
+      "trackId": "t-core",
+      "speakerIds": ["sp-ryan"]
+    },
+    {
+      "kind": "talk",
+      "id": "s-d1-2",
+      "title": "CSS Houdini in the Real World",
+      "abstract": "CSS Houdini is no longer experimental. Here's what actually shipped, what the browser support looks like, and three production use cases you can steal.",
+      "startsAt": "2026-06-12T10:30:00+02:00",
+      "endsAt": "2026-06-12T11:00:00+02:00",
+      "dayId": "d1",
+      "roomId": "r-main",
+      "trackId": "t-core",
+      "speakerIds": ["sp-lea"],
+      "level": "intermediate"
+    },
+    {
+      "kind": "talk",
+      "id": "s-d1-3",
+      "title": "Node.js in 2026: Still Standing",
+      "abstract": "A grounded look at Node.js performance wins in v22/v24, the new permission model, and how it holds up against Deno and Bun in real workloads.",
+      "startsAt": "2026-06-12T10:30:00+02:00",
+      "endsAt": "2026-06-12T11:00:00+02:00",
+      "dayId": "d1",
+      "roomId": "r-side",
+      "trackId": "t-runtime",
+      "speakerIds": ["sp-mat"],
+      "level": "intermediate"
+    },
+    {
+      "kind": "break",
+      "id": "s-d1-c1",
+      "title": "Coffee Break",
+      "startsAt": "2026-06-12T11:00:00+02:00",
+      "endsAt": "2026-06-12T11:30:00+02:00",
+      "dayId": "d1",
+      "roomId": "r-foyer",
+      "breakType": "coffee"
+    },
+    {
+      "kind": "lightning",
+      "id": "s-d1-4",
+      "title": "Three Deno APIs You Should Know",
+      "abstract": "KV, Queues, and Cron — the three Deno platform APIs that change how you think about serverless.",
+      "startsAt": "2026-06-12T11:30:00+02:00",
+      "endsAt": "2026-06-12T11:45:00+02:00",
+      "dayId": "d1",
+      "roomId": "r-side",
+      "trackId": "t-runtime",
+      "speakerIds": ["sp-ryan"]
+    },
+    {
+      "kind": "break",
+      "id": "s-d1-l1",
+      "title": "Lunch",
+      "startsAt": "2026-06-12T12:00:00+02:00",
+      "endsAt": "2026-06-12T13:30:00+02:00",
+      "dayId": "d1",
+      "roomId": "r-foyer",
+      "breakType": "lunch"
+    },
+    {
+      "kind": "keynote",
+      "id": "s-d1-5",
+      "title": "Web Standards Are Winning",
+      "abstract": "A look at the specification work that finally moved the web forward: Temporal, CSS Anchoring, View Transitions, and what's still in the queue.",
+      "startsAt": "2026-06-12T13:30:00+02:00",
+      "endsAt": "2026-06-12T14:15:00+02:00",
+      "dayId": "d1",
+      "roomId": "r-main",
+      "trackId": "t-core",
+      "speakerIds": ["sp-lea"]
+    },
+    {
+      "kind": "talk",
+      "id": "s-d1-6",
+      "title": "Fastify at 10: Lessons Learned",
+      "abstract": "Ten years of Fastify in production — the mistakes we made, the mistakes users kept making, and the v5 decisions that came from watching both.",
+      "startsAt": "2026-06-12T14:30:00+02:00",
+      "endsAt": "2026-06-12T15:00:00+02:00",
+      "dayId": "d1",
+      "roomId": "r-main",
+      "trackId": "t-runtime",
+      "speakerIds": ["sp-mat"],
+      "level": "advanced"
+    },
+    {
+      "kind": "break",
+      "id": "s-d1-c2",
+      "title": "Afternoon Coffee",
+      "startsAt": "2026-06-12T15:00:00+02:00",
+      "endsAt": "2026-06-12T15:30:00+02:00",
+      "dayId": "d1",
+      "roomId": "r-foyer",
+      "breakType": "coffee"
+    },
+    {
+      "kind": "talk",
+      "id": "s-d1-7",
+      "title": "Build Tools in 2026",
+      "abstract": "Vite, Rolldown, Turbopack, Rspack — a benchmarked, opinionated guide to picking the right bundler for your project in 2026.",
+      "startsAt": "2026-06-12T15:30:00+02:00",
+      "endsAt": "2026-06-12T16:00:00+02:00",
+      "dayId": "d1",
+      "roomId": "r-main",
+      "trackId": "t-tooling",
+      "speakerIds": ["sp-ryan"],
+      "level": "intermediate"
+    },
+    {
+      "kind": "break",
+      "id": "s-d1-party",
+      "title": "Closing Drinks",
+      "startsAt": "2026-06-12T17:00:00+02:00",
+      "endsAt": "2026-06-12T19:00:00+02:00",
+      "dayId": "d1",
+      "roomId": "r-foyer",
+      "breakType": "social"
+    },
+    {
+      "kind": "break",
+      "id": "s-d2-reg",
+      "title": "Check-in & Coffee",
+      "startsAt": "2026-06-13T09:00:00+02:00",
+      "endsAt": "2026-06-13T10:00:00+02:00",
+      "dayId": "d2",
+      "roomId": "r-foyer",
+      "breakType": "coffee"
+    },
+    {
+      "kind": "workshop",
+      "id": "s-d2-1",
+      "title": "Deno 2 in Production",
+      "abstract": "Build and deploy a full-stack Deno 2 app with KV, Queues, and the Deno Deploy platform. Covers auth, persistence, and CI.",
+      "startsAt": "2026-06-13T10:00:00+02:00",
+      "endsAt": "2026-06-13T13:00:00+02:00",
+      "dayId": "d2",
+      "roomId": "r-lab",
+      "trackId": "t-runtime",
+      "speakerIds": ["sp-ryan"],
+      "capacity": 40,
+      "prerequisites": "Comfortable with TypeScript and REST APIs.",
+      "signupUrl": "#"
+    },
+    {
+      "kind": "break",
+      "id": "s-d2-l1",
+      "title": "Lunch",
+      "startsAt": "2026-06-13T13:00:00+02:00",
+      "endsAt": "2026-06-13T14:00:00+02:00",
+      "dayId": "d2",
+      "roomId": "r-foyer",
+      "breakType": "lunch"
+    },
+    {
+      "kind": "workshop",
+      "id": "s-d2-2",
+      "title": "High-Performance Node.js APIs with Fastify",
+      "abstract": "Build a production-grade REST API with Fastify v5: schemas, plugins, hooks, and the performance patterns that make it twice as fast as Express.",
+      "startsAt": "2026-06-13T14:00:00+02:00",
+      "endsAt": "2026-06-13T17:00:00+02:00",
+      "dayId": "d2",
+      "roomId": "r-lab",
+      "trackId": "t-runtime",
+      "speakerIds": ["sp-mat"],
+      "capacity": 40,
+      "prerequisites": "Node.js fundamentals. Some Express or Koa experience helpful.",
+      "signupUrl": "#"
+    }
+  ]
+}

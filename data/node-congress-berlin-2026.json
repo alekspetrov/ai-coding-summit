@@ -1,0 +1,248 @@
+{
+  "conference": {
+    "name": "Node Congress",
+    "edition": "Berlin 2026",
+    "startsAt": "2026-10-08T09:00:00+02:00",
+    "endsAt": "2026-10-09T18:00:00+02:00",
+    "timezone": "Europe/Berlin",
+    "venue": { "name": "Radialsystem Berlin" }
+  },
+  "days": [
+    { "id": "d1", "date": "2026-10-08", "label": "Conference Day", "short": "Thu 8" },
+    { "id": "d2", "date": "2026-10-09", "label": "Workshop Day",   "short": "Fri 9" }
+  ],
+  "tracks": [
+    { "id": "t-node",   "name": "Node.js Core",  "color": "#5FA04E" },
+    { "id": "t-infra",  "name": "Infrastructure","color": "#38BDF8" },
+    { "id": "t-sec",    "name": "Security",      "color": "#F59E0B" },
+    { "id": "t-perf",   "name": "Performance",   "color": "#F472B6" }
+  ],
+  "rooms": [
+    { "id": "r-main",  "name": "Main Hall",  "capacity": 800 },
+    { "id": "r-side",  "name": "Side Room",  "capacity": 200 },
+    { "id": "r-lab",   "name": "Workshop Lab","capacity": 50  },
+    { "id": "r-foyer", "name": "Foyer",      "capacity": 1000}
+  ],
+  "speakers": [
+    {
+      "id": "sp-mat",
+      "name": "Matteo Collina",
+      "company": "Platformatic",
+      "tagline": "Node.js TSC, Fastify creator",
+      "bio": "Matteo is a Node.js Technical Steering Committee member and creator of Fastify. He works on making Node.js services production-ready at scale.",
+      "initials": "MC",
+      "tint": "#5FA04E",
+      "socials": { "twitter": "matteocollina", "github": "mcollina" }
+    },
+    {
+      "id": "sp-bethany",
+      "name": "Bethany Griggs",
+      "company": "Red Hat",
+      "tagline": "Node.js TSC member",
+      "bio": "Bethany is a Node.js TSC member at Red Hat, focused on LTS release quality and the HTTP/2 implementation.",
+      "initials": "BG",
+      "tint": "#38BDF8",
+      "socials": { "twitter": "BethGriggs_", "github": "BethGriggs" }
+    },
+    {
+      "id": "sp-rafael",
+      "name": "Rafael Gonzaga",
+      "company": "Platformatic",
+      "tagline": "Node.js TSC, security releases",
+      "bio": "Rafael is a Node.js TSC member focused on security releases and the undici HTTP client.",
+      "initials": "RG",
+      "tint": "#F59E0B",
+      "socials": { "twitter": "rafaelgss", "github": "RafaelGSS" }
+    }
+  ],
+  "sessions": [
+    {
+      "kind": "break",
+      "id": "s-d1-reg",
+      "title": "Registration & Coffee",
+      "startsAt": "2026-10-08T08:30:00+02:00",
+      "endsAt": "2026-10-08T09:30:00+02:00",
+      "dayId": "d1",
+      "roomId": "r-foyer",
+      "breakType": "coffee"
+    },
+    {
+      "kind": "keynote",
+      "id": "s-d1-1",
+      "title": "Node.js 2026: The Platform Matures",
+      "abstract": "Node.js turned 17 this year. A look at what the platform got right over the last two years — native fetch, the permission model, WebCrypto parity — and what's coming in v24 LTS.",
+      "startsAt": "2026-10-08T09:30:00+02:00",
+      "endsAt": "2026-10-08T10:15:00+02:00",
+      "dayId": "d1",
+      "roomId": "r-main",
+      "trackId": "t-node",
+      "speakerIds": ["sp-mat"]
+    },
+    {
+      "kind": "talk",
+      "id": "s-d1-2",
+      "title": "Node.js LTS: What Actually Changes",
+      "abstract": "A practitioner's guide to evaluating Node.js LTS releases — what landed in v22 and v24 that actually matters, and how to run the upgrade safely in a production monorepo.",
+      "startsAt": "2026-10-08T10:30:00+02:00",
+      "endsAt": "2026-10-08T11:00:00+02:00",
+      "dayId": "d1",
+      "roomId": "r-main",
+      "trackId": "t-node",
+      "speakerIds": ["sp-bethany"],
+      "level": "intermediate"
+    },
+    {
+      "kind": "talk",
+      "id": "s-d1-3",
+      "title": "Node.js Security in 2026",
+      "abstract": "The threat landscape for Node.js apps in 2026: supply chain risk, the permission model in practice, and how the security release process actually works when CVEs drop.",
+      "startsAt": "2026-10-08T10:30:00+02:00",
+      "endsAt": "2026-10-08T11:00:00+02:00",
+      "dayId": "d1",
+      "roomId": "r-side",
+      "trackId": "t-sec",
+      "speakerIds": ["sp-rafael"],
+      "level": "intermediate"
+    },
+    {
+      "kind": "break",
+      "id": "s-d1-c1",
+      "title": "Coffee Break",
+      "startsAt": "2026-10-08T11:00:00+02:00",
+      "endsAt": "2026-10-08T11:30:00+02:00",
+      "dayId": "d1",
+      "roomId": "r-foyer",
+      "breakType": "coffee"
+    },
+    {
+      "kind": "lightning",
+      "id": "s-d1-4",
+      "title": "undici: The HTTP Client Node.js Deserves",
+      "abstract": "undici is now the default HTTP client in Node.js. A quick tour of what it does better than got, axios, and node-fetch — and the one footgun.",
+      "startsAt": "2026-10-08T11:30:00+02:00",
+      "endsAt": "2026-10-08T11:45:00+02:00",
+      "dayId": "d1",
+      "roomId": "r-side",
+      "trackId": "t-node",
+      "speakerIds": ["sp-rafael"]
+    },
+    {
+      "kind": "break",
+      "id": "s-d1-l1",
+      "title": "Lunch",
+      "startsAt": "2026-10-08T12:00:00+02:00",
+      "endsAt": "2026-10-08T13:30:00+02:00",
+      "dayId": "d1",
+      "roomId": "r-foyer",
+      "breakType": "lunch"
+    },
+    {
+      "kind": "keynote",
+      "id": "s-d1-5",
+      "title": "The Future of Server-Side JavaScript",
+      "abstract": "WinterCG, WinterTC, the web-compat effort — what it means for Node.js, Deno, Bun, and the workload they share to converge on the same APIs.",
+      "startsAt": "2026-10-08T13:30:00+02:00",
+      "endsAt": "2026-10-08T14:15:00+02:00",
+      "dayId": "d1",
+      "roomId": "r-main",
+      "trackId": "t-node",
+      "speakerIds": ["sp-bethany", "sp-mat"]
+    },
+    {
+      "kind": "talk",
+      "id": "s-d1-6",
+      "title": "Profiling Node.js at Scale",
+      "abstract": "V8 sampling profiler, clinic.js, and --cpu-prof — a practical walkthrough of finding and fixing the CPU and memory hot spots that emerge at 10k RPS.",
+      "startsAt": "2026-10-08T14:30:00+02:00",
+      "endsAt": "2026-10-08T15:00:00+02:00",
+      "dayId": "d1",
+      "roomId": "r-main",
+      "trackId": "t-perf",
+      "speakerIds": ["sp-mat"],
+      "level": "advanced"
+    },
+    {
+      "kind": "break",
+      "id": "s-d1-c2",
+      "title": "Afternoon Coffee",
+      "startsAt": "2026-10-08T15:00:00+02:00",
+      "endsAt": "2026-10-08T15:30:00+02:00",
+      "dayId": "d1",
+      "roomId": "r-foyer",
+      "breakType": "coffee"
+    },
+    {
+      "kind": "talk",
+      "id": "s-d1-7",
+      "title": "Hardening Node.js: The Permission Model in Depth",
+      "abstract": "A deep dive into Node.js's opt-in permission model: file system, network, process, and child process restrictions in real deployment scenarios.",
+      "startsAt": "2026-10-08T15:30:00+02:00",
+      "endsAt": "2026-10-08T16:00:00+02:00",
+      "dayId": "d1",
+      "roomId": "r-main",
+      "trackId": "t-sec",
+      "speakerIds": ["sp-rafael"],
+      "level": "advanced"
+    },
+    {
+      "kind": "break",
+      "id": "s-d1-party",
+      "title": "Closing Drinks",
+      "startsAt": "2026-10-08T17:00:00+02:00",
+      "endsAt": "2026-10-08T19:00:00+02:00",
+      "dayId": "d1",
+      "roomId": "r-foyer",
+      "breakType": "social"
+    },
+    {
+      "kind": "break",
+      "id": "s-d2-reg",
+      "title": "Check-in & Coffee",
+      "startsAt": "2026-10-09T09:00:00+02:00",
+      "endsAt": "2026-10-09T10:00:00+02:00",
+      "dayId": "d2",
+      "roomId": "r-foyer",
+      "breakType": "coffee"
+    },
+    {
+      "kind": "workshop",
+      "id": "s-d2-1",
+      "title": "Fastify v5: From Zero to Production",
+      "abstract": "Build a typed, validated, plugin-based REST API with Fastify v5 from scratch. We'll wire up Zod schemas, authentication hooks, rate limiting, and structured logging.",
+      "startsAt": "2026-10-09T10:00:00+02:00",
+      "endsAt": "2026-10-09T13:00:00+02:00",
+      "dayId": "d2",
+      "roomId": "r-lab",
+      "trackId": "t-node",
+      "speakerIds": ["sp-mat"],
+      "capacity": 40,
+      "prerequisites": "Node.js fundamentals and basic TypeScript.",
+      "signupUrl": "#"
+    },
+    {
+      "kind": "break",
+      "id": "s-d2-l1",
+      "title": "Lunch",
+      "startsAt": "2026-10-09T13:00:00+02:00",
+      "endsAt": "2026-10-09T14:00:00+02:00",
+      "dayId": "d2",
+      "roomId": "r-foyer",
+      "breakType": "lunch"
+    },
+    {
+      "kind": "workshop",
+      "id": "s-d2-2",
+      "title": "Node.js Security Workshop",
+      "abstract": "Threat model a real Node.js application, run the CVE playbook, enable the permission model, and set up supply-chain defenses with npm audit and lockfiles.",
+      "startsAt": "2026-10-09T14:00:00+02:00",
+      "endsAt": "2026-10-09T17:00:00+02:00",
+      "dayId": "d2",
+      "roomId": "r-lab",
+      "trackId": "t-sec",
+      "speakerIds": ["sp-rafael", "sp-bethany"],
+      "capacity": 35,
+      "prerequisites": "Production Node.js experience. Bring a project you can threat-model.",
+      "signupUrl": "#"
+    }
+  ]
+}
