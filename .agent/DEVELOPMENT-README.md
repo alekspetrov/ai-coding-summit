@@ -14,11 +14,11 @@ Plan: `~/.claude/plans/research-this-with-a-playful-newell.md`.
 | Task | Title | Status |
 |------|-------|--------|
 | [TASK-01](./tasks/TASK-01-scaffold-theming.md) | Scaffold + theming foundation | ✅ Complete |
-| [TASK-02](./tasks/TASK-02-data-layer.md) | Data layer (Zod + loader + JSON) | 🤖 Pilot (issue #1) |
-| [TASK-03](./tasks/TASK-03-pure-logic.md) | Pure logic + tests | 🤖 Pilot (issue #2) |
-| [TASK-04](./tasks/TASK-04-atoms-icons.md) | Atoms + icons | 🚧 Partial — atoms+icons done; cards/screen-atoms blocked on #1 |
-| [TASK-05](./tasks/TASK-05-state-providers-banner.md) | State + providers + banner ("now") | ⛔ Blocked on Pilot #1/#2 |
-| [TASK-06](./tasks/TASK-06-screens-routing.md) | Screens + routing | ⛔ Blocked on Pilot #1/#2 |
+| [TASK-02](./tasks/TASK-02-data-layer.md) | Data layer (Zod + loader + JSON) | ✅ Complete (Pilot #1/PR#6, integrated) |
+| [TASK-03](./tasks/TASK-03-pure-logic.md) | Pure logic + tests | ✅ Complete (Pilot #2/PR#5, integrated 9074176) |
+| [TASK-04](./tasks/TASK-04-atoms-icons.md) | Atoms + icons | 🚧 Partial — atoms+icons done; cards next (now unblocked) |
+| [TASK-05](./tasks/TASK-05-state-providers-banner.md) | State + providers + banner ("now") | 🔓 Unblocked — ready |
+| [TASK-06](./tasks/TASK-06-screens-routing.md) | Screens + routing | 🔓 Unblocked — ready |
 | [TASK-07](./tasks/TASK-07-pwa-offline-polish.md) | PWA + offline + polish | ⏸️ Deferred (open) — manifest+icon done; SW dropped (no PWA for now) |
 | [TASK-08](./tasks/TASK-08-navigator-docs.md) | Navigator docs update | 📋 Planned (last) |
 
