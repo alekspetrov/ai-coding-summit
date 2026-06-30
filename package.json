@@ -1,0 +1,16 @@
+{
+  "name": "ai-coding-summit",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "@vitest/coverage-v8": "^4.1.9",
+    "typescript": "^6.0.0",
+    "vitest": "^4.0.0"
+  }
+}
